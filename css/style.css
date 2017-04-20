@@ -79,7 +79,7 @@ header img.logo {
 
 header nav {
     background: linear-gradient(#0272A7, #013953);
-    border-radius: 0.75em 0.75em 0 0;
+    border-radius: 1em 1em 0 0;
 }
 
 header nav li {
@@ -95,7 +95,7 @@ header nav a {
 }
 
 header nav li:first-child a {
-    border-top-left-radius: 0.75rem;
+    border-top-left-radius: 1rem;
 }
 
 header nav a:hover {
@@ -120,7 +120,44 @@ header .latest {
 header .latest .screenshots {
     max-width: 60%;
     background: #000;
+}
+
+/* Screenshots Slideshow */
+
+.slider {
     overflow: hidden;
+}
+
+.slider .img-wrapper {
+    display: flex;
+    position: relative;
+    left: 0;
+    /* for 5 slides */
+    width: 500%;
+    transition: left 1s;
+}
+
+.slider .img-wrapper figure {
+    position: relative;
+    margin: 0;
+    width: 100%;
+}
+
+.slider img {
+    width: 100%;
+}
+
+.slider figcaption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0.4em 0;
+    background: rgba(32,32,32, 0.7);
+    text-align: center;
+    color: #fff;
+    text-shadow: -1px 1px 1px #000;
+    border-top: thin solid rgba(96,96,96, 0.4);
+    box-shadow: 0 1px 8px rgba(0,0,0, 0.7);
 }
 
 header .latest .flexbox-wrapper {
