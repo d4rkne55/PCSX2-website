@@ -1,0 +1,158 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0 5%;
+    background: #ddd;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+.flexbox-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+.flexbox-wrapper.columns {
+    flex-direction: column;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* === Header === */
+
+header {
+    margin: 1em 0 1.5em 15.75em;
+}
+
+header > * {
+    margin-top: 0.75em;
+}
+
+header img.logo {
+    /*display: block;*/
+    margin-top: 0;
+}
+
+/* Navigation */
+
+header nav {
+    background: linear-gradient(#0272A7, #013953);
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav li {
+    display: inline-block;
+    padding: 0.6em 1em;
+    font-size: 1.1em;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header nav a span {
+    display: block;
+}
+
+header nav a small {
+    color: #dfdfdf;
+}
+
+header .latest {
+    display: flex;
+}
+
+header .latest .screenshots {
+    max-width: 60%;
+    background-color: #000;
+}
+
+header .latest .screenshots img {
+    width: 100%;
+}
+
+header .latest .flexbox-wrapper {
+    margin-left: 0.75em;
+}
+
+header .latest .flexbox-wrapper > div {
+    flex: 1;
+    background: #fff;
+}
+
+header .latest .flexbox-wrapper > div:not(:last-child) {
+    margin-bottom: 0.75em;
+}
+
+
+aside {
+    width: 15em;
+    margin-right: 0.75em;
+    background: #fff;
+}
+
+main {
+    flex: 1;
+}
+
+main .breadcrumbs {
+    background: #fff;
+}
+
+main .breadcrumbs span {
+    display: block;
+    float: left;
+    position: relative;
+    padding: 0.4em 0.8em;
+}
+
+main .breadcrumbs span:not(:last-child) {
+    /* same as border-width */
+    margin-right: 8px;
+}
+
+main .breadcrumbs span:not(:last-child)::after,
+main .breadcrumbs span:not(:last-child)::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    /* 2x border-width */
+    right: -16px;
+    /* same as border-width */
+    margin-top: -8px;
+    height: 0;
+    width: 0;
+    border: 8px solid transparent;
+    border-left-color: rgba(0,0,0, 0.33);
+}
+
+main .breadcrumbs span:not(:last-child)::before {
+    margin-right: 1px;
+    border-left-color: #fff;
+    z-index: 1;
+}
+
+article {
+    margin-top: 0.75em;
+    padding: 1em;
+    background: #fff;
+}
+
+footer {
+    text-align: center;
+}
