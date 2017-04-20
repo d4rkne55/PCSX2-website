@@ -66,24 +66,34 @@
             <div class="screenshots slider">
                 <div class="img-wrapper">
                     <figure>
-                        <img src="img/star_ocean3_n1_thumb.jpg">
+                        <a href="img/star_ocean3_n1.jpg" target="_blank">
+                            <img src="img/star_ocean3_n1_thumb.jpg">
+                        </a>
                         <figcaption>Star Ocean 3</figcaption>
                     </figure>
                     <figure>
-                        <img src="img/finalfantasy12izjs_03_thumb.jpg">
+                        <a href="img/finalfantasy12izjs_03.jpg" target="_blank">
+                            <img src="img/finalfantasy12izjs_03_thumb.jpg">
+                        </a>
                         <figcaption>Final Fantasy XII</figcaption>
                     </figure>
                     <figure>
-                        <img src="img/pcsx2-r5037 2012-04-09 21-54-13-10_thumb.jpg">
+                        <a href="img/pcsx2-r5037 2012-04-09 21-54-13-10.png" target="_blank">
+                            <img src="img/pcsx2-r5037 2012-04-09 21-54-13-10_thumb.jpg">
+                        </a>
                         <figcaption>Silent Hill 3</figcaption>
                     </figure>
                     <figure>
-                        <img src="img/persona4-1_thumb.jpg">
+                        <a href="img/persona4-1.jpg" target="_blank">
+                            <img src="img/persona4-1_thumb.jpg">
+                        </a>
                         <figcaption>Persona 4</figcaption>
                     </figure>
                     <figure>
-                        <img src="img/grandia3_02_thumb.jpg">
-                        <figcaption>Grandia 3</figcaption>
+                        <a href="img/grandia3_02.jpg" target="_blank">
+                            <img src="img/grandia3_02_thumb.jpg">
+                        </a>
+                        <figcaption>Grandia 3 field gameplay, @ 1920x1080 WS patched</figcaption>
                     </figure>
                 </div>
             </div>
@@ -152,39 +162,11 @@
         </ul>
     </footer>
 
+    <script src="js/slideshow.js"></script>
     <script>
-    (function() {
-        // Slideshow
-        var slideshows = document.querySelectorAll('.slider');
-
-        // loop through every slideshow element
-        for (var i = 0; i < slideshows.length; i++) {
-            var slideWrapper = slideshows[i].querySelector('.img-wrapper');
-            var slideCount = slideWrapper.children.length;
-
-            // set correct wrapper width, needed for sliders that don't have 5 slides
-            slideWrapper.style.width = slideCount * 100 + '%';
-            slideWrapper.setAttribute('data-currSlide', 0);
-
-            var slideFnc = function() {
-                var currSlide = parseInt(slideWrapper.getAttribute('data-currSlide'));
-                var nextSlide = (currSlide + 1) % slideCount;
-
-                // slide to the next slide
-                slideWrapper.style.left = nextSlide * -100 + '%';
-                slideWrapper.setAttribute('data-currSlide', nextSlide);
-            };
-            var autoSlide = setInterval(slideFnc, 5000);
-
-            slideWrapper.addEventListener("mouseover", function() {
-                clearInterval(autoSlide);
-            });
-
-            slideWrapper.addEventListener("mouseout", function() {
-                autoSlide = setInterval(slideFnc, 5000);
-            });
-        }
-    })();
+    window.onload = function() {
+        createSlideshows('.slider', 5000);
+    }
     </script>
 </body>
 </html>
