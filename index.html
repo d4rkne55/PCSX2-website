@@ -155,6 +155,35 @@
     <script>
     (function() {
         // Slideshow
+        var slideshows = document.querySelectorAll('.slider');
+
+        // loop through every slideshow element
+        for (var i = 0; i < slideshows.length; i++) {
+            var slideWrapper = slideshows[i].querySelector('.img-wrapper');
+            var slideCount = slideWrapper.children.length;
+
+            // set correct wrapper width, needed for sliders that don't have 5 slides
+            slideWrapper.style.width = slideCount * 100 + '%';
+            slideWrapper.setAttribute('data-currSlide', 0);
+
+            var slideFnc = function() {
+                var currSlide = parseInt(slideWrapper.getAttribute('data-currSlide'));
+                var nextSlide = (currSlide + 1) % slideCount;
+
+                // slide to the next slide
+                slideWrapper.style.left = nextSlide * -100 + '%';
+                slideWrapper.setAttribute('data-currSlide', nextSlide);
+            };
+            var autoSlide = setInterval(slideFnc, 5000);
+
+            slideWrapper.addEventListener("mouseover", function() {
+                clearInterval(autoSlide);
+            });
+
+            slideWrapper.addEventListener("mouseout", function() {
+                autoSlide = setInterval(slideFnc, 5000);
+            });
+        }
     })();
     </script>
 </body>
