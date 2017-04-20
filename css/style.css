@@ -1,13 +1,47 @@
+/* === General === */
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 0 5%;
-    background: #ddd;
+    margin: 0 5vw;
+    /*background: #ddd;*/
+    background: linear-gradient(#bbdfff 5em, #ddd 40em);
 }
 
+a {
+    text-decoration: none;
+    /*color: darkslateblue;*/
+    color: #3949ab;
+}
+
+a:hover {
+    color: royalblue;
+}
+
+/*
+ * fixes 'strange' whitespace below image
+ * http://stackoverflow.com/a/31445364/3597276
+ */
 img {
-    vertical-align: bottom;
+    vertical-align: top;
+}
+
+ul.hor {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    padding: 0.8em 0.5em;
+    background: #fff;
+    text-align: center;
+    border-radius: 6px;
+}
+
+h4 {
+    margin: 0 0 1em;
 }
 
 .flexbox-wrapper {
@@ -45,22 +79,27 @@ header img.logo {
 
 header nav {
     background: linear-gradient(#0272A7, #013953);
-}
-
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    border-radius: 0.75em 0.75em 0 0;
 }
 
 header nav li {
     display: inline-block;
-    padding: 0.6em 1em;
     font-size: 1.1em;
 }
 
 header nav a {
-    text-decoration: none;
+    display: block;
+    padding: 0.6em 1em;
+    color: #fff;
+    transition: background 0.2s;
+}
+
+header nav li:first-child a {
+    border-top-left-radius: 0.75rem;
+}
+
+header nav a:hover {
+    background: rgba(0,0,0, 0.33);
     color: #fff;
 }
 
@@ -72,17 +111,16 @@ header nav a small {
     color: #dfdfdf;
 }
 
+/* Latest stuff */
+
 header .latest {
     display: flex;
 }
 
 header .latest .screenshots {
     max-width: 60%;
-    background-color: #000;
-}
-
-header .latest .screenshots img {
-    width: 100%;
+    background: #000;
+    overflow: hidden;
 }
 
 header .latest .flexbox-wrapper {
@@ -91,7 +129,6 @@ header .latest .flexbox-wrapper {
 
 header .latest .flexbox-wrapper > div {
     flex: 1;
-    background: #fff;
 }
 
 header .latest .flexbox-wrapper > div:not(:last-child) {
@@ -99,18 +136,38 @@ header .latest .flexbox-wrapper > div:not(:last-child) {
 }
 
 
+/* === Sidebox === */
+
 aside {
     width: 15em;
     margin-right: 0.75em;
-    background: #fff;
+}
+
+aside .box:not(:last-child) {
+    margin-bottom: 0.75em;
+}
+
+aside .box a {
+    line-height: 1.4em;
 }
 
 main {
     flex: 1;
 }
 
+
+/* === Main === */
+
+/* Breadcrumbs */
+
 main .breadcrumbs {
+    display: inline-block;
+    /* fixes whitespace below due to inline-block */
+    vertical-align: top;
+    padding-left: 1em;
     background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(0,0,0, 0.2);
 }
 
 main .breadcrumbs span {
@@ -118,34 +175,84 @@ main .breadcrumbs span {
     float: left;
     position: relative;
     padding: 0.4em 0.8em;
+    font-weight: bold;
+    color: rgba(0,0,0, 0.55);
 }
 
-main .breadcrumbs span:not(:last-child) {
+main .breadcrumbs span:nth-child(2) {
+    color: rgba(0,0,0, 0.48);
+}
+
+main .breadcrumbs span:nth-child(3) {
+    color: rgba(0,0,0, 0.44);
+}
+
+main .breadcrumbs span:nth-child(4) {
+    color: rgba(0,0,0, 0.40);
+}
+
+main .breadcrumbs span {
     /* same as border-width */
-    margin-right: 8px;
+    margin-left: 0.5em;
 }
 
-main .breadcrumbs span:not(:last-child)::after,
-main .breadcrumbs span:not(:last-child)::before {
+main .breadcrumbs span::after,
+main .breadcrumbs span::before {
     content: '';
     display: block;
     position: absolute;
     top: 50%;
     /* 2x border-width */
-    right: -16px;
+    left: -0.5em;
     /* same as border-width */
-    margin-top: -8px;
+    margin-top: -0.5em;
     height: 0;
     width: 0;
-    border: 8px solid transparent;
+    border: 0.5em solid transparent;
     border-left-color: rgba(0,0,0, 0.33);
 }
 
-main .breadcrumbs span:not(:last-child)::before {
-    margin-right: 1px;
+main .breadcrumbs span::before {
+    margin-left: -1px;
     border-left-color: #fff;
     z-index: 1;
 }
+
+/* Pagination */
+
+.pagination {
+    margin-top: 0.75em;
+    padding-top: 1em;
+    border-top: 2px dotted hsl(0, 0%, 95%);
+    cursor: default;
+}
+
+.pagination > * {
+    display: inline-block;
+    padding: 0.2em 0.3em;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0, 0.25);
+}
+
+.pagination .btn {
+    padding: 0.2em 0.5em;
+    color: #666;
+    border-radius: 4px
+}
+
+.pagination a.btn:hover {
+    color: #000;
+}
+
+.pagination span,
+.pagination span.btn {
+    background: rgba(255,255,255, 0.66);
+    color: rgba(0,0,0, 0.5);
+    cursor: default;
+}
+
+/* Posts */
 
 article {
     margin-top: 0.75em;
@@ -153,6 +260,30 @@ article {
     background: #fff;
 }
 
+
+/* === Footer === */
+
 footer {
+    margin: 3em -5vw 0;
+    padding: 1em 5vw;
+    background: hsl(0, 0%, 92%);
     text-align: center;
+}
+
+footer a.rss-feed {
+    display: inline-block;
+    margin-bottom: 1em;
+}
+
+footer ul {
+    display: inline-flex;
+}
+
+footer li {
+    padding: 0 0.75em;
+    font-size: 0.9em;
+}
+
+footer li:not(:last-of-type) {
+    border-right: 2px solid rgba(0,0,0, 0.2);
 }

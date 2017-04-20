@@ -17,7 +17,7 @@
     <header>
         <img class="logo" src="img/logo_classic.png" alt="PCSX2 logo">
         <nav>
-            <ul>
+            <ul class="hor">
                 <li>
                     <a href="#" class="home" title="Home">
                         <span>Home</span>
@@ -67,20 +67,32 @@
                 <img src="img/finalfantasy12izjs_03_thumb.jpg">
             </div>
             <div class="flexbox-wrapper columns">
-                <div class="videos"></div>
-                <div class="threads"></div>
-                <div class="git-commits"></div>
+                <div class="box videos">
+                    <h4>Latest YouTube Videos</h4>
+                    <a href="https://www.youtube.com/watch?v=iG-e5UtPu70">Tokyo Xtreme Racer Drift [1080p 60 FPS] running on PCSX2 1.5.0</a>
+                </div>
+                <div class="box threads"></div>
+                <div class="box git-commits"></div>
             </div>
         </div>
     </header>
 
     <div class="flexbox-wrapper">
         <aside>
-            <div class="links"></div>
-            <div class="compatibility"></div>
-            <div class="social"></div>
-            <div class="ps2home"></div>
-            <div class="search"></div>
+            <div class="box links">
+                <h4>Food for Thought</h4>
+                <a href="/developer-blog.html">Developer Blog</a><br>
+                <a href="/meet-the-team.html">Meet the team</a><br>
+                <a href="/contact-us.html">Contact us</a><br>
+                <a href="/sitemap.html">Sitemap</a><br>
+                <a href="/article-archive">Article archive</a>
+            </div>
+            <div class="box compatibility">
+                <h4>Compatibility Overview</h4>
+            </div>
+            <div class="box social"></div>
+            <div class="box ps2home"></div>
+            <div class="box search"></div>
         </aside>
 
         <main>
@@ -91,15 +103,28 @@
             <article></article>
             <article></article>
             <article></article>
-            <div class="pagination"></div>
+            <div class="pagination">
+                <span class="btn">Start</span>
+                <span class="btn">Prev</span>
+                &nbsp;
+                <span>1</span>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                &nbsp;
+                <a class="btn" href="#">Next</a>
+                <a class="btn" href="#">End</a>
+            </div>
         </main>
     </div>
 
     <footer>
         <a href="/?format=feed&amp;type=rss" class="rss-feed">
-            <img src="img/RSS-icon.png" alt="RSS Feed">
+            <img src="img/RSS-icon.png" alt="RSS Feed" title="Get RSS-Feed">
         </a>
-        <ul>
+        <br>
+        <ul class="hor">
             <li><span class="copyright">Webdesign and code &copy; 2016 PCSX2 Team Ltd</span></li>
             <li><a href="/privacy-policy.html">Privacy Policy</a></li>
             <li><a href="/eula.html">EULA</a></li>
