@@ -91,19 +91,14 @@ header img.logo {
     border-radius: 1em 1em 0 0;
 }
 
-.header-nav li {
-    display: inline-block;
-    font-size: 1.1em;
-}
-
 .header-nav a {
-    display: block;
     padding: 0.6em 1em;
+    font-size: 1.1em;
     color: #fff;
     transition: background 0.2s;
 }
 
-.header-nav li:first-child a {
+.header-nav a:first-child {
     border-top-left-radius: 1rem;
 }
 
@@ -118,6 +113,48 @@ header img.logo {
 
 .header-nav a small {
     color: #dfdfdf;
+}
+
+.search-form {
+    /* vertical centering */
+    align-self: center;
+    /* input to right */
+    align-items: flex-end;
+    padding-right: 0.75em;
+}
+
+.search-form input {
+    width: 2.5em;
+    height: 2.5em;
+    padding: 0.4em;
+    background:
+        url('data:image/svg+xml,%3Csvg height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M20 .005c-6.627 0-12 5.373-12 12 0 2.026.507 3.933 1.395 5.608L1.05 25.955l.008.006C.406 26.603 0 27.49 0 28.478c0 1.95 1.58 3.53 3.53 3.53.984 0 1.873-.407 2.514-1.06l-.002-.002 8.34-8.34c1.677.89 3.587 1.4 5.618 1.4 6.627 0 12-5.373 12-12s-5.373-12-12-12zM4.795 29.697c-.322.334-.768.543-1.266.543-.976 0-1.766-.79-1.766-1.764 0-.498.21-.943.543-1.266l-.01-.008 8.067-8.066c.705.95 1.545 1.79 2.494 2.498l-8.063 8.063zM20 22.007c-5.522 0-10-4.48-10-10 0-5.523 4.478-10 10-10 5.52 0 10 4.477 10 10 0 5.52-4.48 10-10 10z" fill="#fff"/%3E%3Cpath d="M20 5.005c-3.867 0-7 3.134-7 7 0 .276.224.5.5.5s.5-.224.5-.5c0-3.313 2.686-6 6-6 .275 0 .5-.224.5-.5s-.225-.5-.5-.5z" fill="#fff"/%3E%3C/svg%3E')
+        center left 0.5em/1.25em no-repeat, #033d63;
+    color: transparent;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    outline: none;
+    box-shadow: 0 0 6px 1px #ddd;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.search-form input:hover,
+.search-form input:focus {
+    background-image: url('data:image/svg+xml,%3Csvg height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M20 .005c-6.627 0-12 5.373-12 12 0 2.026.507 3.933 1.395 5.608L1.05 25.955l.008.006C.406 26.603 0 27.49 0 28.478c0 1.95 1.58 3.53 3.53 3.53.984 0 1.873-.407 2.514-1.06l-.002-.002 8.34-8.34c1.677.89 3.587 1.4 5.618 1.4 6.627 0 12-5.373 12-12s-5.373-12-12-12zM4.795 29.697c-.322.334-.768.543-1.266.543-.976 0-1.766-.79-1.766-1.764 0-.498.21-.943.543-1.266l-.01-.008 8.067-8.066c.705.95 1.545 1.79 2.494 2.498l-8.063 8.063zM20 22.007c-5.522 0-10-4.48-10-10 0-5.523 4.478-10 10-10 5.52 0 10 4.477 10 10 0 5.52-4.48 10-10 10z" fill="#111"/%3E%3Cpath d="M20 5.005c-3.867 0-7 3.134-7 7 0 .276.224.5.5.5s.5-.224.5-.5c0-3.313 2.686-6 6-6 .275 0 .5-.224.5-.5s-.225-.5-.5-.5z" fill="#333"/%3E%3C/svg%3E');
+    background-color: #eee;
+    border-color: #bbb;
+    box-shadow: none;
+}
+
+.search-form input:focus {
+    width: 100%;
+    max-width: 15em;
+    padding-left: 2.15em;
+    background-color: #fff;
+    color: #111;
+    border-radius: 0.4em;
+    cursor: auto;
 }
 
 
@@ -160,9 +197,10 @@ header .latest .screenshots {
 
 .slider figcaption {
     position: absolute;
+    right: 0;
     bottom: 0;
-    width: 100%;
-    padding: 0.4em 0;
+    left: 0;
+    padding: 0.4em;
     background-color: rgba(32,32,32, 0.7);
     text-align: center;
     color: #fff;
