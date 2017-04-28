@@ -126,6 +126,7 @@ header img.logo {
 
 .search-form input {
     width: 2.5em;
+    max-width: 15em;
     height: 2.5em;
     padding: 0.4em;
     /* Icon made by 'Designmodo' from www.iconfinder.com is licensed under CC BY 3.0 */
@@ -152,7 +153,6 @@ header img.logo {
 
 .search-form input:focus {
     width: 100%;
-    max-width: 15em;
     padding-left: 2.15em;
     background-color: #fff;
     color: #111;
