@@ -87,46 +87,76 @@ header img.logo {
 /* === Navigation === */
 
 .header-nav {
+    justify-content: space-between;
     background-image: linear-gradient(#0272a7, #013953);
     border-radius: 1em 1em 0 0;
     box-shadow: 0 1px 4px -1px rgba(0,0,0, 0.75);
 }
 
-.header-nav a {
+.header-nav > ul {
+    display: inline-flex;
+}
+
+.header-nav > ul > li > a {
+    display: inline-block;
     padding: 0.6em 1em;
     font-size: 1.1em;
     color: #fff;
     transition: background 0.2s;
 }
 
-.header-nav a:first-child {
+.header-nav > ul > li:first-child > a {
     border-top-left-radius: 1rem;
 }
 
-.header-nav a:hover {
+.header-nav > ul > li:hover > a {
     background-color: rgba(0,0,0, 0.33);
-    color: #fff;
 }
 
-.header-nav a span {
+.header-nav a > span {
     display: block;
 }
 
-.header-nav a small {
+.header-nav a > small {
     color: #dfdfdf;
+}
+
+/* == Dropdown menu == */
+
+.header-nav .dropdown-menu {
+    position: absolute;
+    display: none;
+    padding: 0.5em 1em;
+    background-color: #fff;
+    line-height: 1.5em;
+    border-radius: 0 0 0.25em 0.25em;
+    box-shadow: 0 1px 4px rgba(0,0,0, 0.3);
+    z-index: 2;
+}
+
+.header-nav li:hover > .dropdown-menu {
+    display: block;
+}
+
+.header-nav .dropdown-menu a {
+    color: #555;
+}
+
+.header-nav .dropdown-menu a:hover {
+    color: royalblue;
 }
 
 .search-form {
     /* vertical centering */
     align-self: center;
     /* input to right */
-    align-items: flex-end;
+    justify-content: flex-end;
+    max-width: 15em;
     padding-right: 0.75em;
 }
 
 .search-form input {
     width: 2.5em;
-    max-width: 15em;
     height: 2.5em;
     padding: 0.4em;
     /* Icon made by 'Designmodo' from www.iconfinder.com is licensed under CC BY 3.0 */

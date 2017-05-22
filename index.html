@@ -17,40 +17,75 @@
     <header>
         <img class="logo" src="img/logo_classic.png" alt="PCSX2 logo">
         <nav class="header-nav flexbox-wrapper">
-            <a href="#" class="home" title="Home">
-                <span>Home</span>
-                <small>News</small>
-            </a>
-            <a href="#" class="start" title="Getting Started">
-                <span>Getting Started</span>
-                <small>Start here!</small>
-            </a>
-            <a href="#" class="download dropdown" title="Download">
-                <span>Download</span>
-                <small>Get PCSX2</small>
-            </a>
-            <a href="#" class="guide dropdown" title="Guide">
-                <span>Guide</span>
-                <small>Config Guide</small>
-            </a>
-            <a href="#" class="support dropdown" title="Support">
-                <span>Support</span>
-                <small>Need help?</small>
-            </a>
-            <a href="#" class="compat" title="Compatibility">
-                <span>Compatibility</span>
-                <small>Check your games!</small>
-            </a>
-            <a href="#" class="demo dropdown" title="Demo">
-                <span>Demo</span>
-                <small>Screens and videos</small>
-            </a>
-            <form method="get" class="search-form flexbox-wrapper columns">
+            <ul class="hor">
+                <li>
+                    <a href="#" class="home">
+                        <span>Home</span>
+                        <small>News</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="start">
+                        <span>Getting Started</span>
+                        <small>Start here!</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="download">
+                        <span>Download</span>
+                        <small>Get PCSX2</small>
+                    </a>
+                    <ul class="dropdown-menu hor">
+                        <li><a href="#">Windows</a></li>
+                        <li><a href="#">Linux</a></li>
+                        <li><a href="#">Mac</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="guide">
+                        <span>Guide</span>
+                        <small>Config Guide</small>
+                    </a>
+                    <ul class="dropdown-menu hor">
+                        <li><a href="#">English guide</a></li>
+                        <li><a href="#">Guide translations</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="support">
+                        <span>Support</span>
+                        <small>Need help?</small>
+                    </a>
+                    <ul class="dropdown-menu hor">
+                        <li><a href="#">Official forum</a></li>
+                        <li><a href="#">Frequently Asked Questions</a></li>
+                        <li><a href="#">PCSX2 Wiki</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="compat">
+                        <span>Compatibility</span>
+                        <small>Check your games!</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="demo">
+                        <span>Demo</span>
+                        <small>Screens and videos</small>
+                    </a>
+                    <ul class="dropdown-menu hor">
+                        <li><a href="#">Screenshots</a></li>
+                        <li><a href="#">Videos</a></li>
+                        <li><a href="http://www.youtube.com/user/PCSX2team" target="_blank">YouTube-Channel</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form method="get" class="search-form flexbox-wrapper">
                 <!--
                 Icon made by 'Designmodo' from www.iconfinder.com is licensed under CC BY 3.0
                 https://www.iconfinder.com/icons/115695
                 -->
-                <input type="search" name="q" title="Search">
+                <input type="search" name="q" title="Search" autocomplete="off">
             </form>
         </nav>
         <div class="latest">
@@ -69,8 +104,8 @@
                         <figcaption>Final Fantasy XII</figcaption>
                     </figure>
                     <figure>
-                        <a href="img/pcsx2-r5037 2012-04-09 21-54-13-10.png" target="_blank">
-                            <img src="img/pcsx2-r5037 2012-04-09 21-54-13-10_thumb.jpg">
+                        <a href="img/pcsx2-r5037%202012-04-09%2021-54-13-10.png" target="_blank">
+                            <img src="img/pcsx2-r5037%202012-04-09%2021-54-13-10_thumb.jpg">
                         </a>
                         <figcaption>Silent Hill 3</figcaption>
                     </figure>
