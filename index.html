@@ -58,7 +58,7 @@
                     </a>
                     <ul class="dropdown-menu hor">
                         <li><a href="#">Official forum</a></li>
-                        <li><a href="#">Frequently Asked Questions</a></li>
+                        <li><a href="#" title="Frequently Asked Questions">FAQ</a></li>
                         <li><a href="#">PCSX2 Wiki</a></li>
                     </ul>
                 </li>
@@ -169,9 +169,24 @@
                     <div class="progress" style="width: 0.15%"></div>
                 </div>
             </div>
-            <div class="box social"></div>
-            <div class="box ps2home"></div>
-            <div class="box search"></div>
+            <div class="box social">
+                <h4>Share!</h4>
+                <div class="fb-like"
+                    data-href="https://www.facebook.com/Pcsx2-145051045565631/"
+                    data-layout="box_count"
+                    data-action="like"
+                    data-size="small"
+                    data-show-faces="false"
+                    data-share="false">
+                </div>
+                <div class="g-plusone" data-size="tall" data-href="http://pcsx2.net/"></div>
+                <a class="twitter-share-button" href="https://twitter.com/share" data-url="http://pcsx2.net/" data-via="PCSX2">Tweet</a>
+            </div>
+            <div class="box ps2home">
+                <a href="http://www.ps2home.co.uk/" target="_blank">
+                    <img src="img/PS2-Home-Banner.png" alt="PS2 Home" title="PS2 Home Banner">
+                </a>
+            </div>
         </aside>
 
         <main>
@@ -213,6 +228,20 @@
             <li><a href="/eula.html">EULA</a></li>
         </ul>
     </footer>
+
+    <!-- Social widgets JS -->
+    <div id="fb-root"></div>
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="//platform.twitter.com/widgets.js" async></script>
 
     <script src="js/slideshow.js"></script>
     <script>
