@@ -8,7 +8,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 0 5vw;
     /*background: #ddd;*/
     background-image: linear-gradient(#bbdfff 5em, #ddd 40em);
 }
@@ -47,6 +46,10 @@ h4 {
     margin: 0 0 1em;
 }
 
+.margin-wrapper {
+    margin: 0 5vw;
+}
+
 .flexbox-wrapper {
     display: flex;
     flex: 1;
@@ -72,7 +75,8 @@ h4 {
 */
 
 header {
-    margin: 1em 0 1.5em 15.75em;
+    flex: 1;
+    margin: 1em 0 1.5em;
 }
 
 header > * {
@@ -476,8 +480,7 @@ article {
 */
 
 footer {
-    /* -5vw horizontal because of the 5vw body margin */
-    margin: 3em -5vw 0;
+    margin-top: 3em;
     padding: 1em 5vw;
     background-color: hsl(0, 0%, 92%);
     text-align: center;

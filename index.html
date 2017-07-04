@@ -14,203 +14,210 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <img class="logo" src="img/logo_classic.png" alt="PCSX2 logo">
-        <nav class="header-nav flexbox-wrapper">
-            <ul class="hor">
-                <li>
-                    <a href="#" class="home">
-                        <span>Home</span>
-                        <small>News</small>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="start">
-                        <span>Getting Started</span>
-                        <small>Start here!</small>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="download">
-                        <span>Download</span>
-                        <small>Get PCSX2</small>
-                    </a>
-                    <ul class="dropdown-menu hor">
-                        <li><a href="#">Windows</a></li>
-                        <li><a href="#">Linux</a></li>
-                        <li><a href="#">Mac</a></li>
+    <div class="margin-wrapper">
+        <div class="flexbox-wrapper">
+            <aside></aside>
+
+            <header>
+                <img class="logo" src="img/logo_classic.png" alt="PCSX2 logo">
+                <nav class="header-nav flexbox-wrapper">
+                    <ul class="hor">
+                        <li>
+                            <a href="#" class="home">
+                                <span>Home</span>
+                                <small>News</small>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="start">
+                                <span>Getting Started</span>
+                                <small>Start here!</small>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="download">
+                                <span>Download</span>
+                                <small>Get PCSX2</small>
+                            </a>
+                            <ul class="dropdown-menu hor">
+                                <li><a href="#">Windows</a></li>
+                                <li><a href="#">Linux</a></li>
+                                <li><a href="#">Mac</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="guide">
+                                <span>Guide</span>
+                                <small>Config Guide</small>
+                            </a>
+                            <ul class="dropdown-menu hor">
+                                <li><a href="#">English guide</a></li>
+                                <li><a href="#">Guide translations</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="support">
+                                <span>Support</span>
+                                <small>Need help?</small>
+                            </a>
+                            <ul class="dropdown-menu hor">
+                                <li><a href="#">Official forum</a></li>
+                                <li><a href="#" title="Frequently Asked Questions">FAQ</a></li>
+                                <li><a href="#">PCSX2 Wiki</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="compat">
+                                <span>Compatibility</span>
+                                <small>Check your games!</small>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="demo">
+                                <span>Demo</span>
+                                <small>Screens and videos</small>
+                            </a>
+                            <ul class="dropdown-menu hor">
+                                <li><a href="#">Screenshots</a></li>
+                                <li><a href="#">Videos</a></li>
+                                <li><a href="http://www.youtube.com/user/PCSX2team" target="_blank">YouTube-Channel</a></li>
+                            </ul>
+                        </li>
                     </ul>
-                </li>
-                <li>
-                    <a href="#" class="guide">
-                        <span>Guide</span>
-                        <small>Config Guide</small>
-                    </a>
-                    <ul class="dropdown-menu hor">
-                        <li><a href="#">English guide</a></li>
-                        <li><a href="#">Guide translations</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="support">
-                        <span>Support</span>
-                        <small>Need help?</small>
-                    </a>
-                    <ul class="dropdown-menu hor">
-                        <li><a href="#">Official forum</a></li>
-                        <li><a href="#" title="Frequently Asked Questions">FAQ</a></li>
-                        <li><a href="#">PCSX2 Wiki</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="compat">
-                        <span>Compatibility</span>
-                        <small>Check your games!</small>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="demo">
-                        <span>Demo</span>
-                        <small>Screens and videos</small>
-                    </a>
-                    <ul class="dropdown-menu hor">
-                        <li><a href="#">Screenshots</a></li>
-                        <li><a href="#">Videos</a></li>
-                        <li><a href="http://www.youtube.com/user/PCSX2team" target="_blank">YouTube-Channel</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <form method="get" class="search-form flexbox-wrapper">
-                <!--
-                Icon made by 'Designmodo' from www.iconfinder.com is licensed under CC BY 3.0
-                https://www.iconfinder.com/icons/115695
-                -->
-                <input type="search" name="q" title="Search" autocomplete="off">
-            </form>
-        </nav>
-        <div class="latest">
-            <div class="screenshots slider">
-                <div class="img-wrapper">
-                    <figure>
-                        <a href="img/star_ocean3_n1.jpg" target="_blank">
-                            <img src="img/star_ocean3_n1_thumb.jpg">
-                        </a>
-                        <figcaption>Star Ocean 3</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="img/finalfantasy12izjs_03.jpg" target="_blank">
-                            <img src="img/finalfantasy12izjs_03_thumb.jpg">
-                        </a>
-                        <figcaption>Final Fantasy XII</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="img/pcsx2-r5037%202012-04-09%2021-54-13-10.png" target="_blank">
-                            <img src="img/pcsx2-r5037%202012-04-09%2021-54-13-10_thumb.jpg">
-                        </a>
-                        <figcaption>Silent Hill 3</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="img/persona4-1.jpg" target="_blank">
-                            <img src="img/persona4-1_thumb.jpg">
-                        </a>
-                        <figcaption>Persona 4</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="img/grandia3_02.jpg" target="_blank">
-                            <img src="img/grandia3_02_thumb.jpg">
-                        </a>
-                        <figcaption>Grandia 3 field gameplay, @ 1920x1080 WS patched</figcaption>
-                    </figure>
+                    <form method="get" class="search-form flexbox-wrapper">
+                        <!--
+                        Icon made by 'Designmodo' from www.iconfinder.com is licensed under CC BY 3.0
+                        https://www.iconfinder.com/icons/115695
+                        -->
+                        <input type="search" name="q" title="Search" autocomplete="off">
+                    </form>
+                </nav>
+
+                <div class="latest">
+                    <div class="screenshots slider">
+                        <div class="img-wrapper">
+                            <figure>
+                                <a href="img/star_ocean3_n1.jpg" target="_blank">
+                                    <img src="img/star_ocean3_n1_thumb.jpg">
+                                </a>
+                                <figcaption>Star Ocean 3</figcaption>
+                            </figure>
+                            <figure>
+                                <a href="img/finalfantasy12izjs_03.jpg" target="_blank">
+                                    <img src="img/finalfantasy12izjs_03_thumb.jpg">
+                                </a>
+                                <figcaption>Final Fantasy XII</figcaption>
+                            </figure>
+                            <figure>
+                                <a href="img/pcsx2-r5037%202012-04-09%2021-54-13-10.png" target="_blank">
+                                    <img src="img/pcsx2-r5037%202012-04-09%2021-54-13-10_thumb.jpg">
+                                </a>
+                                <figcaption>Silent Hill 3</figcaption>
+                            </figure>
+                            <figure>
+                                <a href="img/persona4-1.jpg" target="_blank">
+                                    <img src="img/persona4-1_thumb.jpg">
+                                </a>
+                                <figcaption>Persona 4</figcaption>
+                            </figure>
+                            <figure>
+                                <a href="img/grandia3_02.jpg" target="_blank">
+                                    <img src="img/grandia3_02_thumb.jpg">
+                                </a>
+                                <figcaption>Grandia 3 field gameplay, @ 1920x1080 WS patched</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="flexbox-wrapper columns">
+                        <div class="box videos">
+                            <h4>Latest YouTube Videos</h4>
+                            <a href="https://www.youtube.com/watch?v=iG-e5UtPu70">Tokyo Xtreme Racer Drift [1080p 60 FPS] running on PCSX2 1.5.0</a>
+                        </div>
+                        <div class="box threads"></div>
+                        <div class="box git-commits"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="flexbox-wrapper columns">
-                <div class="box videos">
-                    <h4>Latest YouTube Videos</h4>
-                    <a href="https://www.youtube.com/watch?v=iG-e5UtPu70">Tokyo Xtreme Racer Drift [1080p 60 FPS] running on PCSX2 1.5.0</a>
-                </div>
-                <div class="box threads"></div>
-                <div class="box git-commits"></div>
-            </div>
+            </header>
         </div>
-    </header>
 
-    <div class="flexbox-wrapper">
-        <aside>
-            <div class="box links">
-                <h4>Food for Thought</h4>
-                <a href="/developer-blog.html">Developer Blog</a><br>
-                <a href="/meet-the-team.html">Meet the team</a><br>
-                <a href="/contact-us.html">Contact us</a><br>
-                <a href="/sitemap.html">Sitemap</a><br>
-                <a href="/article-archive">Article archive</a>
-            </div>
-            <div class="box compatibility">
-                <h4>Compatibility Overview</h4>
-                <h3>2592 games</h3>
+        <div class="flexbox-wrapper">
+            <aside>
+                <div class="box links">
+                    <h4>Food for Thought</h4>
+                    <a href="/developer-blog.html">Developer Blog</a><br>
+                    <a href="/meet-the-team.html">Meet the team</a><br>
+                    <a href="/contact-us.html">Contact us</a><br>
+                    <a href="/sitemap.html">Sitemap</a><br>
+                    <a href="/article-archive">Article archive</a>
+                </div>
+                <div class="box compatibility">
+                    <h4>Compatibility Overview</h4>
+                    <h3>2592 games</h3>
 
-                <label>Playable: 2466</label>
-                <div class="progress-bar playable" title="95%">
-                    <div class="progress" style="width: 95.14%"></div>
+                    <label>Playable: 2466</label>
+                    <div class="progress-bar playable" title="95%">
+                        <div class="progress" style="width: 95.14%"></div>
+                    </div>
+                    <label>Ingame: 57</label>
+                    <div class="progress-bar ingame" title="2.2%">
+                        <div class="progress" style="width: 2.2%"></div>
+                    </div>
+                    <label>Menus: 37</label>
+                    <div class="progress-bar menus" title="1.4%">
+                        <div class="progress" style="width: 1.43%"></div>
+                    </div>
+                    <label>Intro: 28</label>
+                    <div class="progress-bar intro" title="1.1%">
+                        <div class="progress" style="width: 1.08%"></div>
+                    </div>
+                    <label>Nothing: 4</label>
+                    <div class="progress-bar nothing" title="0.2%">
+                        <div class="progress" style="width: 0.15%"></div>
+                    </div>
                 </div>
-                <label>Ingame: 57</label>
-                <div class="progress-bar ingame" title="2.2%">
-                    <div class="progress" style="width: 2.2%"></div>
+                <div class="box social">
+                    <h4>Share!</h4>
+                    <div class="fb-like"
+                         data-href="https://www.facebook.com/Pcsx2-145051045565631/"
+                         data-layout="box_count"
+                         data-action="like"
+                         data-size="small"
+                         data-show-faces="false"
+                         data-share="false">
+                    </div>
+                    <div class="g-plusone" data-size="tall" data-href="http://pcsx2.net/"></div>
+                    <a class="twitter-share-button" href="https://twitter.com/share" data-url="http://pcsx2.net/" data-via="PCSX2">Tweet</a>
                 </div>
-                <label>Menus: 37</label>
-                <div class="progress-bar menus" title="1.4%">
-                    <div class="progress" style="width: 1.43%"></div>
+                <div class="box ps2home">
+                    <a href="http://www.ps2home.co.uk/" target="_blank">
+                        <img src="img/PS2-Home-Banner.png" alt="PS2 Home" title="PS2 Home Banner">
+                    </a>
                 </div>
-                <label>Intro: 28</label>
-                <div class="progress-bar intro" title="1.1%">
-                    <div class="progress" style="width: 1.08%"></div>
-                </div>
-                <label>Nothing: 4</label>
-                <div class="progress-bar nothing" title="0.2%">
-                    <div class="progress" style="width: 0.15%"></div>
-                </div>
-            </div>
-            <div class="box social">
-                <h4>Share!</h4>
-                <div class="fb-like"
-                    data-href="https://www.facebook.com/Pcsx2-145051045565631/"
-                    data-layout="box_count"
-                    data-action="like"
-                    data-size="small"
-                    data-show-faces="false"
-                    data-share="false">
-                </div>
-                <div class="g-plusone" data-size="tall" data-href="http://pcsx2.net/"></div>
-                <a class="twitter-share-button" href="https://twitter.com/share" data-url="http://pcsx2.net/" data-via="PCSX2">Tweet</a>
-            </div>
-            <div class="box ps2home">
-                <a href="http://www.ps2home.co.uk/" target="_blank">
-                    <img src="img/PS2-Home-Banner.png" alt="PS2 Home" title="PS2 Home Banner">
-                </a>
-            </div>
-        </aside>
+            </aside>
 
-        <main>
-            <div class="breadcrumbs clearfix">
-                <span>Home</span>
-                <span>Test</span>
-            </div>
-            <article></article>
-            <article></article>
-            <article></article>
-            <div class="pagination">
-                <span class="btn">Start</span>
-                <span class="btn">Prev</span>
-                &nbsp;
-                <span>1</span>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                &nbsp;
-                <a class="btn" href="#">Next</a>
-                <a class="btn" href="#">End</a>
-            </div>
-        </main>
+            <main>
+                <div class="breadcrumbs clearfix">
+                    <span>Home</span>
+                    <span>Test</span>
+                </div>
+                <article></article>
+                <article></article>
+                <article></article>
+                <div class="pagination">
+                    <span class="btn">Start</span>
+                    <span class="btn">Prev</span>
+                    &nbsp;
+                    <span>1</span>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    &nbsp;
+                    <a class="btn" href="#">Next</a>
+                    <a class="btn" href="#">End</a>
+                </div>
+            </main>
+        </div>
     </div>
 
     <footer>
