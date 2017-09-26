@@ -10,6 +10,7 @@ body {
     min-height: 100vh;
     /*background: #ddd;*/
     background-image: linear-gradient(#bbdfff 5em, #ddd 40em);
+    color: #222;
 }
 
 a {
@@ -74,16 +75,16 @@ h4 {
 --------------------------------
 */
 
-header {
+.page-header {
     flex: 1;
     margin: 1em 0 1.5em;
 }
 
-header > * {
+.page-header > * {
     margin-top: 0.75em;
 }
 
-header img.logo {
+.page-header img.logo {
     margin-top: 0;
 }
 
@@ -207,11 +208,11 @@ header img.logo {
 
 /* === Latest stuff === */
 
-header .latest {
+.page-header .latest {
     display: flex;
 }
 
-header .latest .screenshots {
+.page-header .latest .screenshots {
     max-width: 60%;
     background-color: #000;
 }
@@ -257,15 +258,15 @@ header .latest .screenshots {
 }
 
 
-header .latest .flexbox-wrapper {
+.page-header .latest .flexbox-wrapper {
     margin-left: 0.75em;
 }
 
-header .latest .flexbox-wrapper > div {
+.page-header .latest .flexbox-wrapper > div {
     flex: 1;
 }
 
-header .latest .flexbox-wrapper > div:not(:last-child) {
+.page-header .latest .flexbox-wrapper > div:not(:last-child) {
     margin-bottom: 0.75em;
 }
 
@@ -348,7 +349,7 @@ aside .box.social .twitter-share-button {
 }
 
 .compatibility label {
-    font-size: 0.9em;
+    font-size: 0.875em;
 }
 
 
@@ -427,38 +428,70 @@ main .breadcrumbs span::before {
     z-index: 1;
 }
 
+main .pagination-wrapper {
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.75em;
+    padding-top: 1em;
+    border-top: 2px dotted hsl(0, 0%, 95%);
+}
+
+
+/* === Buttons === */
+
+.btn {
+    display: inline-block;
+    padding: 0.375em 0.5em;
+    background-color: #555;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0, 0.25);
+    transition: background-color 0.4s ease-out;
+}
+
+.btn:hover {
+    background-color: #222;
+    color: #fff;
+}
+
 
 /* === Pagination === */
 
 .pagination {
-    margin-top: 0.75em;
-    padding-top: 1em;
-    border-top: 2px dotted hsl(0, 0%, 95%);
     cursor: default;
 }
 
-.pagination > * {
+.pagination > *,
+.pagination a.btn:hover {
+    background-color: #fff;
+}
+
+.pagination .page-link {
     display: inline-block;
     padding: 0.2em 0.3em;
-    background-color: #fff;
     border-radius: 2px;
     box-shadow: 0 1px 3px rgba(0,0,0, 0.25);
 }
 
 .pagination .btn {
+    /* TODO: keep padding or remove for unifying? */
     padding: 0.2em 0.5em;
     color: #666;
-    border-radius: 4px;
 }
 
 .pagination a.btn:hover {
     color: #000;
 }
 
-.pagination span,
+.pagination span.page-link,
 .pagination span.btn {
     background-color: rgba(255,255,255, 0.66);
     color: rgba(0,0,0, 0.5);
+}
+
+.pagination-wrapper .page-count {
+    font-size: 0.875em;
+    color: hsl(0, 0%, 35%);
     cursor: default;
 }
 
@@ -466,9 +499,53 @@ main .breadcrumbs span::before {
 /* === Posts === */
 
 article {
+    display: flex;
     margin-top: 0.75em;
+}
+
+article .author-avatar img {
+    border: 2px solid #fff;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+}
+
+article .blog-post {
     padding: 1em;
     background-color: #fff;
+}
+
+article header {
+    padding-bottom: 0.15em;
+    border-bottom: thin solid rgba(0,0,0, 0.1);
+}
+
+article header h2 {
+    margin: 0 0 0.1em;
+    color: #00a3cc;
+}
+
+article header small {
+    color: #999;
+}
+
+article header small a {
+    color: #777;
+}
+
+article .progress-report-banner {
+    display: block;
+    max-width: 100%;
+    margin: 1em auto 1.25em;
+    box-shadow: 0 2px 5px 1px rgba(0,0,0, 0.2);
+}
+
+article p {
+    line-height: 1.2;
+}
+
+article .full-article-link::before {
+    content: 'Read more:';
+    margin-right: 1ch;
 }
 
 
@@ -501,7 +578,7 @@ footer ul {
 
 footer li {
     padding: 0 0.75em;
-    font-size: 0.9em;
+    font-size: 0.875em;
 }
 
 footer li:not(:last-of-type) {

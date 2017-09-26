@@ -18,7 +18,7 @@
         <div class="flexbox-wrapper">
             <aside></aside>
 
-            <header>
+            <header class="page-header">
                 <img class="logo" src="img/logo_classic.png" alt="PCSX2 logo">
                 <nav class="header-nav flexbox-wrapper">
                     <ul class="hor">
@@ -200,21 +200,55 @@
                     <span>Home</span>
                     <span>Test</span>
                 </div>
-                <article></article>
-                <article></article>
-                <article></article>
-                <div class="pagination">
-                    <span class="btn">Start</span>
-                    <span class="btn">Prev</span>
-                    &nbsp;
-                    <span>1</span>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    &nbsp;
-                    <a class="btn" href="#">Next</a>
-                    <a class="btn" href="#">End</a>
+                <article>
+                    <div class="author-avatar">
+                        <img src="img/avatars/bositman.jpg" alt="bositman">
+                    </div>
+                    <div class="blog-post">
+                        <header>
+                            <h2>Q2 2016 progress report</h2>
+                            <small>17. June 2016, by <a href="#">bositman</a></small>
+                        </header>
+                        <img class="progress-report-banner" src="img/progress-reports/progress-rep-q2-2016.jpg">
+                        <p>Hey everyone and welcome to another spectacular PCSX2 progress report! As you may have read in the last report we have moved from doing reports monthly to quarterly in order to better focus our manpower.
+                            Today's report is our first quarterly report and as such there are quite a lot of improvements and changes to go over. Before we do that however we need to ask for <b>your</b> help!</p>
+                        <p>As you probably know PCSX2 is cross platform and runs on Windows and Linux. Because of this we need testers for each of those platforms in order to be effective at developing for them.
+                            Currently we have a very problematic lack of testers on Linux. We would like to take this opportunity to invite those of you with Linux experience to help the project out and become a Linux tester!
+                            Ideally you should be completely comfortable working in Linux (whatever flavor you choose as long as PCSX2 is compatible with it!) and you should have or be willing to develop the knowledge to debug various issues with the emulator in that environment.
+                            If this sounds like you and you want to help us out then please head over to <a href="http://forums.pcsx2.net/Thread-Q2-2016-progress-report"><b>our forum thread here</b></a> and let us know!</p>
+                        <p>With that out of the way let's jump right in to the PCSX2 progress report for Q2 2016! Strap yourself in for the ride because here we go!</p>
+                        <a class="btn full-article-link" href="#">Q2 2016 progress report</a>
+                    </div>
+                </article>
+                <article>
+                    <div class="author-avatar">
+                        <img src="img/avatars/bositman.jpg" alt="bositman">
+                    </div>
+                    <div class="blog-post">
+                        <header>
+                            <h2>New website launched!</h2>
+                            <small>2. May 2016, by <a href="#">bositman</a></small>
+                        </header>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                        <a class="btn full-article-link" href="#">New website launched!</a>
+                    </div>
+                </article>
+                <div class="flexbox-wrapper pagination-wrapper">
+                    <div class="pagination">
+                        <span class="btn">Start</span>
+                        <span class="btn">Prev</span>
+                        &nbsp;
+                        <span class="page-link">1</span>
+                        <a class="page-link" href="#">2</a>
+                        <a class="page-link" href="#">3</a>
+                        <a class="page-link" href="#">4</a>
+                        <a class="page-link" href="#">5</a>
+                        &nbsp;
+                        <a class="btn" href="#">Next</a>
+                        <a class="btn" href="#">End</a>
+                    </div>
+                    <span class="page-count">Page 1 of 5</span>
                 </div>
             </main>
         </div>
@@ -252,7 +286,7 @@
 
     <script src="js/slideshow.js"></script>
     <script>
-    window.onload = function() {
+    document.querySelector('.page-header .slider img').onload = function() {
         createSlideshows('.slider', 5000);
     }
     </script>
